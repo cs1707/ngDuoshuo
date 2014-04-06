@@ -3,7 +3,7 @@ A duoshuo directive for angularjs
 
 ###usage
 ####Add the script to your app
-``` javascript
+``` html
 <script src="ngDuoshuo.js"></script>
 ```
 ####Add `ngDuoshuo` to required modules list
@@ -16,15 +16,15 @@ by configure with `$duoshuoProvider` and registering it via `$duoshuoProvider.se
 
 ####Using the directives
 ######显示多说评论框
-``` javascript
+``` html
 <div  duoshuo 
-      thread-key=" " //required
+      thread-key=""
       url=""
       title=""
       image=""
       authorKey=""
       limit=""
-      order=""
+      order="">
 </div>
 ```
 >`data-thread-key` `string` 推荐
@@ -49,7 +49,7 @@ by configure with `$duoshuoProvider` and registering it via `$duoshuoProvider.se
 >
 >注意：在没有设置data-url项目时，我们优先采用页面中canonical标签值，如果没有设置canonical标签，则会使用页面的url。页面url会自动过滤#之后的参数。对于设置了不同的data-thread-key之后，还发现多篇文章出现相同评论的情况，请确认一下页面中的canonical标签是否重复。
 >
->`data-author-key` `string` 推荐
+>`data-author-key` `string` 必须
 >
 >作者在本站中的id。对于wordpress插件，文章如果填写该id，可以识别作者，在收到评论时，会对该作者发出邮件提醒。通用代码用户及其他插件，如果需要通过这种方式获取邮件，请跟我们联系： 1175762238，联系时请告知你的多说二级域名，data-author-key的值，已经相应的管理员email地址
 >
@@ -62,17 +62,17 @@ by configure with `$duoshuoProvider` and registering it via `$duoshuoProvider.se
 >排序方式，取值：`asc`(从旧到新),`desc`从新到旧)
 
 #####显示最新评论
-``` javascript
+``` html
 <div ds-recent-comments 
      num-items=""
      show-avatars=""
      show-time=""
      show-title=""
      show-admin=""
-     excerpt-length=""
+     excerpt-length="">
 </div>
 ```
-``` javascript
+```
 //以下参数均为可选
 data-num-items="10"     //显示最新评论的条数，最大支持200条
 data-show-avatars="1"   //是否显示头像，1：显示，0：不显示
@@ -82,31 +82,31 @@ data-show-admin="1"     //是否显示管理员的评论，1：显示，0：不�
 data-excerpt-length="70"//最大显示评论汉字数
 ```
 #####显示最近访客
-``` javascript
+``` html
 <div ds-recent-visitors
-     num-items=""
+     num-items="">
 </div>
 ```
 ```
 data-num-items="10"     //显示访客的数量
 ```
 #####显示热评文章
-``` javascript
+``` html
 <div ds-top-threads
      range=""
-     num-items=""
+     num-items="">
 </div>
 ```
-``` javascript
+``` html
 //以下参数均为可选参数
 data-range="weekly"      //热评统计时间范围：daily：日；weekly：周；monthly：月；默认值daily
 data-num-items="5"     //显示最新文章的条数，默认值5
 ```
 #####显示文章评论数
-``` javascript
+``` html
 <div ds-thread-count
-     thread-key="" //required
-     count-type=""
+     thread-key=""
+     count-type="">
 </div>
 ```
 >`data-thread-key` `string` 必须
