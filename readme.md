@@ -3,7 +3,7 @@ A duoshuo directive for angularjs
 
 ###usage
 ####Add the script to your app
-```
+``` javascript
 <script src="ngDuoshuo.js"></script>
 ```
 ####Add `ngDuoshuo` to required modules list
@@ -16,7 +16,7 @@ by configure with `$duoshuoProvider` and registering it via `$duoshuoProvider.se
 
 ####Using the directives
 ######显示多说评论框
-```
+``` javascript
 <div  duoshuo 
       thread-key=" " //required
       url=""
@@ -62,7 +62,7 @@ by configure with `$duoshuoProvider` and registering it via `$duoshuoProvider.se
 >排序方式，取值：`asc`(从旧到新),`desc`从新到旧)
 
 #####显示最新评论
-```
+``` javascript
 <div ds-recent-comments 
      num-items=""
      show-avatars=""
@@ -72,7 +72,7 @@ by configure with `$duoshuoProvider` and registering it via `$duoshuoProvider.se
      excerpt-length=""
 </div>
 ```
-```
+``` javascript
 //以下参数均为可选
 data-num-items="10"     //显示最新评论的条数，最大支持200条
 data-show-avatars="1"   //是否显示头像，1：显示，0：不显示
@@ -82,7 +82,7 @@ data-show-admin="1"     //是否显示管理员的评论，1：显示，0：不�
 data-excerpt-length="70"//最大显示评论汉字数
 ```
 #####显示最近访客
-```
+``` javascript
 <div ds-recent-visitors
      num-items=""
 </div>
@@ -91,19 +91,19 @@ data-excerpt-length="70"//最大显示评论汉字数
 data-num-items="10"     //显示访客的数量
 ```
 #####显示热评文章
-```
+``` javascript
 <div ds-top-threads
      range=""
      num-items=""
 </div>
 ```
-```
+``` javascript
 //以下参数均为可选参数
 data-range="weekly"      //热评统计时间范围：daily：日；weekly：周；monthly：月；默认值daily
 data-num-items="5"     //显示最新文章的条数，默认值5
 ```
 #####显示文章评论数
-```
+``` javascript
 <div ds-thread-count
      thread-key="" //required
      count-type=""
