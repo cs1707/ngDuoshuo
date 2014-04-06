@@ -1,5 +1,5 @@
 ###ngDuoshuo
-an duoshuo directive for angularjs
+A duoshuo directive for angularjs
 
 ###usage
 ####Add the script to your app
