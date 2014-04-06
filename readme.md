@@ -115,7 +115,9 @@ data-num-items="5"     //显示最新文章的条数，默认值5
 >
 >`data-count-type` `string` 可选
 >
->获取的计数类型。`comments`：评论数；`weibo_reposts`：新浪微博转发数；`qqt_reposts`：腾讯微博转发数。默认值为`comments`。
+>获取的计数类型。`comments`：评论数；`weibo_reposts`：新浪微博转发数；`qqt_reposts`：腾讯微博转发数。默认值为`comments`
+
+
 ###License
 MIT
 
